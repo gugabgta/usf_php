@@ -1,0 +1,17 @@
+{
+    "name": "devs/facul",
+    "description": "trabalho facul",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Gustavo Brandão",
+            "email": "gustavo.silva@saitro.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+           "usf\\": "src/"
+        }
+    },
+    "require": {}
+}

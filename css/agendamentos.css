@@ -1,0 +1,37 @@
+.calendario{
+    background-color: gray;
+    margin: 3% 3% 3% 3%;
+    height: 100%;
+    width: 20px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    border: 1px solid transparent;
+}
+
+tr td:nth-child(2) {
+    color: red;
+}
+
+.table-title {
+    font-size: 40px;
+}
+
+tr{
+    font-size: x-large;
+}
+
+td{
+    font-size: x-large;
+}
+
+.side-title {
+    font-size: 24px;
+}
+
+.side-text {
+    font-size: 20px;
+}
