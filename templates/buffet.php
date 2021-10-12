@@ -1,20 +1,44 @@
-<div class="img">    
-    <div class="center-block">
-        <img class="imgbuffet"  src="../imagens/food.png"  alt="...">
-        <img class="imgbuffet1" src="../imagens/food1.png"  alt="...">
-        <img class="imgbuffet2" src="../imagens/food2.png"  alt="...">
-    </div>
+<link rel="stylesheet" href="../css/buffet.css">
+<div class="img container">
+    <img class="food-img" src="../imagens/food.png">
+    <img class="food-img" src="../imagens/food1.png">
+    <img class="food-img" src="../imagens/food2.png">
 </div>
 <div class="container">
-  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-    <div class="col">
-      <div class="p-3 border bg-light">Bebidas</div>
+    <div class="row">
+        <div class="col">
+            <div class="overflow p-3 border bg-light">
+                BEBIDAS<br>
+                CERVEJAS<br>
+                ÁGUA<br>
+                CHÁS<br>
+                ENERGÉTICOS<br>
+                IISOTÔNICOS<br>
+                REFRIGERANTES<br>
+                SUCOS<br>
+            </div>
+        </div>
+        <div class="col overflow">
+            <div class="overflow p-3 border bg-light">
+                COMIDAS<br>
+                MASSAS<br>
+                CARNES<br>
+                GRÃOS<br>
+                SALADAS<br>
+                DOCES<br>
+                SORVETES<br>
+            </div>
+        </div>
+        <div class="col overflow">
+            <div class="overflow p-3 border bg-light">
+                TEMAS<br>
+                GALA<br>
+                SUPER-HEROI<br>
+                HALLOWEEN<br>
+                PASCOA<br>
+                NATAL<br>
+                ANO NOVO<br>
+            </div>
+        </div>
     </div>
-    <div class="col">
-      <div class="p-3 border bg-light">Comidas</div>
-    </div>
-    <div class="col">
-      <div class="p-3 border bg-light">Temas</div>
-    </div>
-  </div>
 </div>
