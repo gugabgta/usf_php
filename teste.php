@@ -1,13 +1,19 @@
 <?php
 
-use usf\Query;
-use usf\Connection;
+require_once 'vendor\autoload.php';
 
-require 'vendor/autoload.php';
+use Kreait\Firebase\Factory;
 
-/* $query = new Query(Connection::getConnection('sqlite'));
-$valor = $query->select('teste', ['*'], []); */
+$factory = (new Factory)
+    ->withServiceAccount('firebase.json')
+    ->withDatabaseUri('https://teste-f99d6-default-rtdb.firebaseio.com');
 
-#$valor = $query->insert('teste', ['nome'], ['Alan']);
-foreach(glob(ini_get("session.save_path") . "/*") as $sessionFile) { unlink($sessionFile); }
-#var_dump($valor);
+$auth = $factory->createAuth('LazpE8sPa1Dd8McHGdAARjxnRYnUKD9bkLhSbupN');
+$database = $factory->createDatabase();
+#$cloudMessaging = $factory->createMessaging();
+#$remoteConfig = $factory->createRemoteConfig();
+#$cloudStorage = $factory->createStorage();
+$reference = $database->getReference('nome');
+$snapshot = $reference->getSnapshot();
+var_dump($snapshot);
+// $value = $snapshot->getValue();
