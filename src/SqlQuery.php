@@ -5,9 +5,9 @@ namespace usf;
 use PDO;
 use usf\Connection;
 
-class Query {
-
-    private $connection;
+class SqlQuery extends QueryBuilder
+{
+    protected $connection;
 
     public function __construct(PDO $connection)
     {

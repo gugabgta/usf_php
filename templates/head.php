@@ -15,11 +15,11 @@
 <div class="bg-light nav-top">
     <a class="nav-logo" href="#" id="logo">EASY EVENTS</a>
     <div class="nav-top-buttons" style="">
-        <?php if (empty($_SESSION['login'])) { ?>
+        <?php if (empty($_SESSION['user'])) { ?>
             <a class="" id="cadastro" aria-current="page" href="../views/login.php">Entre</a> ou <a class="" id="cadastro" aria-current="page" href="../views/cadastro.php">Cadastre</a>
             <b class="nav-link">Para Realizar seu agendamento</b>
         <?php } else { ?>
-            <b class="">Bem Vindo <?= $_SESSION['nome'] ?></b>
+            <b class="">Bem Vindo <?= $_SESSION['user'] ?></b>
             <a class="nav-link" id="cadastro" aria-current="page" href="../views/sair.php">SAIR</a>
         <?php } ?>
     </div>

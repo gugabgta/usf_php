@@ -1,8 +1,7 @@
 <?php
 
 namespace usf;
-
-class Config{
+class Config {
     public static $serverName = 'sqlite:C:\Projects\trabalho_facul';
     public static $username = '';
     public static $password = '';

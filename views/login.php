@@ -1,22 +1,48 @@
 <?php
+
 session_start();
 
-use usf\Html;
-use usf\Query;
-use usf\Sistema;
 use usf\Connection;
+use usf\NoSqlQuery;
 
-require '../vendor/autoload.php';
+require_once '../vendor/autoload.php';
+
 if(isset($_POST['email']) && isset($_POST['senha'])) {
-    $con = new Query(Connection::getConnection('sqlite'));
-    $res = $con->select('usuario', ['*'], ['email' => $_POST['email'], ' and senha' => $_POST['senha']]);
-    if(!empty($res)) {
-        if(is_array($res)) $res = $res[0];
-        $_SESSION['login'] = true;
-        $_SESSION['nome'] = $res['nome'];
-        Sistema::redirect('/views/home.php');
+    $connection = (new Connection)->connect('firebase');
+    $query = new NoSqlQuery($connection->getConnection());
+
+    $usuarios = $query->select('usuarios');
+    foreach ($usuarios as $usuario) {
+        if($usuario['email'] == $_POST['email'] && $usuario['senha'] == $_POST['senha']) {
+            $_SESSION['user'] = $usuario['nome'];
+            header("Location: home.php?user={$usuario['nome']}");
+        }
     }
 }
 require_once '../templates/head.php';
-require_once '../templates/login.php';
+?>
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<div class="container">
+	<form method="post" action="">
+		<div class="row">
+			<div class="column-3 column label">
+				<label for="">E-mail</label>
+			</div>
+			<div class="column-9 column input">
+				<input class="form-control" type="email" name="email" required/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column-3 column label">
+				<label for="">Senha</label>
+			</div>
+			<div class="column-9 column input">
+				<input class="form-control" type="password" name="senha" required/>
+			</div>
+		</div>
+		<button class="btn btn-primary">ENTRAR</button>
+	</form>
+</div>
+<?php
+
 require_once '../templates/footer.php';

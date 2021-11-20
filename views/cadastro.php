@@ -7,7 +7,7 @@ use usf\Connection;
 require '../vendor/autoload.php';
 
 if(isset($_POST['nome'])) {
-    $con = new Query(Connection::getConnection('sqlite'));
+    $con = new Query(Connection::getConnection('firebase'));
     $con->insert('usuario', ['nome, cpf, email, senha, endereco, telefone'], $_POST);
 }
 require_once '../templates/head.php';
