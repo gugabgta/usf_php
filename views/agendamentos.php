@@ -27,21 +27,9 @@ require_once '../templates/head.php';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <div class="container">
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-                    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700'>
-                    <link rel="stylesheet" href="../css/style.css">
-                    <div id="calendar"></div>
-                        <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
-                        <script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
-                        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js'></script>
-                        <script src="../js/index.js"></script>
-                </div>
-            </div>
+            <!--  -->
         </div>
     </div>
 </div>
-?>
 <?php
 require_once '../templates/footer.php';
