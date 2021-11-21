@@ -12,7 +12,6 @@
     <script src="../jsDependencies/all.min.js"></script>
 </head>
 <body>
-<img id="img_header" src="../imagens/titulo_home.png" alt="APROVEITE A SEMANA PARA AGENDAR UM EVENTO COM 20% DE DESCONTO">
 <div class="bg-light nav-top">
     <a class="nav-logo" href="#" id="logo">EASY EVENTS</a>
     <div class="nav-top-buttons" style="">
@@ -29,7 +28,7 @@
     <div class="nav-buttons row">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" href="../views/home.php">Home</a>
+                <a class="nav-link active" href="../views/home.php">Agendar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="../views/agendamentos.php">Agendamentos</a>

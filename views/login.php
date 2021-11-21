@@ -13,7 +13,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
 
     $usuarios = $query->select('usuarios');
     foreach ($usuarios as $usuario) {
-        if($usuario['email'] == $_POST['email'] && $usuario['senha'] == $_POST['senha']) {
+        if($usuario['email'] == $_POST['email'] && $usuario['senha'] == md5($_POST['senha'])) {
             $_SESSION['user'] = $usuario['nome'];
             header("Location: home.php?user={$usuario['nome']}");
         }
