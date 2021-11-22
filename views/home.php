@@ -6,14 +6,12 @@ use usf\Connection;
 use usf\NoSqlQuery;
 
 require_once '../vendor/autoload.php';
+require_once '../includes/colors.php';
 
 $connection = (new Connection)->connect('firebase');
 $query = new NoSqlQuery($connection->getConnection());
 
 if(isset($_POST['title'])) {
-    ob_start();
-    var_dump($_POST);
-    error_log(ob_get_clean());
     $index = explode('-', $_POST['data']);
     $index = $index[0] . '/' . $index[1] . '/' . $index[2];
     unset($_POST['data']);
@@ -44,7 +42,7 @@ require_once '../templates/head.php';
                 <label for="hora">Data: </label>
             </div>
             <div class="col-lg-10">
-                <input class="form-control" type="date" name="data" required/>
+                <input class="form-control" type="date" id="data" name="data" value="<?= date("Y-m-d") ?>"required/>
             </div>
         </div>
         <div class="row">
@@ -52,8 +50,8 @@ require_once '../templates/head.php';
                 <label for="">Hora: </label>
             </div>
             <div class="col-lg-10">
-                <input type="time" class="form-control" name="hora" min="08:00" max="18:00" required>
-                <small>Aberto das 8:00 as 18:00</small>
+                <input type="time" class="form-control" name="hora" min="08:00" max="23:00" value="<?= date("H:i") ?>" required>
+                <small>Aberto das 8:00 as 23:00</small>
             </div>
         </div>
         <div class="row">
@@ -99,6 +97,7 @@ require_once '../templates/head.php';
         <button class="btn btn-primary">Enviar</button>
 	</form>
 </div>
+<script src="../js/agendar.js"></script>
 <?php
 
 require_once '../templates/footer.php';

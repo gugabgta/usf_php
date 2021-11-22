@@ -26,8 +26,7 @@ class NoSqlQuery extends QueryBuilder
 
     public function delete($reference)
     {
-        $reference = $this->database->getReference($reference);
-        $reference->set('');
+        $reference = $this->database->getReference($reference)->remove();
     }
 
     public function update($reference, $data)

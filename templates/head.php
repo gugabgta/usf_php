@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +12,19 @@
     <script src="../jsDependencies/all.min.js"></script>
 </head>
 <body>
-<div class="bg-light nav-top">
-    <a class="nav-logo" href="#" id="logo">EASY EVENTS</a>
+<div class="nav-top" style="background-color: <?= backgroundColor ?>;">
+    <img src="../imagens/LogoTransparente.png" alt="logo" style="width:30%;height: auto;z-index: 1;margin-top: 30px;">
     <div class="nav-top-buttons" style="">
-        <?php if (empty($_SESSION['user'])) { ?>
+        <?php if (empty($_SESSION['user'])) : ?>
             <a class="" id="cadastro" aria-current="page" href="../views/login.php">Entre</a> ou <a class="" id="cadastro" aria-current="page" href="../views/cadastro.php">Cadastre</a>
             <b class="nav-link">Para Realizar seu agendamento</b>
-        <?php } else { ?>
+        <?php else: ?>
             <b class="">Bem Vindo <?= $_SESSION['user'] ?></b>
             <a class="nav-link" id="cadastro" aria-current="page" href="../views/sair.php">SAIR</a>
-        <?php } ?>
+        <?php endif ?>
     </div>
 </div>
-<nav class="navbar sticky-top navbar-bot navbar-expand-lg navbar-light bg-light">
+<nav class="navbar sticky-top navbar-bot navbar-expand-lg navbar-light" style="background-color: <?= backgroundColor ?>;">
     <div class="nav-buttons row">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">

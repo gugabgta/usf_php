@@ -6,7 +6,7 @@ use usf\NoSqlQuery;
 session_start();
 
 require_once '../vendor/autoload.php';
-require_once 'colors.php';
+include 'colors.php';
 include 'dicionario.php';
 
 if(!isset($_SESSION['user'])) {

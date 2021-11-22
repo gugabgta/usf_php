@@ -6,6 +6,7 @@ use usf\Connection;
 use usf\NoSqlQuery;
 
 require_once '../vendor/autoload.php';
+require_once '../includes/colors.php';
 
 if(isset($_POST['email']) && isset($_POST['senha'])) {
     $connection = (new Connection)->connect('firebase');
