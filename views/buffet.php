@@ -1,5 +1,6 @@
 <?php
 
+exit('404 page not found');
 require '../includes/setSessao.php';
 
 require_once '../templates/head.php';

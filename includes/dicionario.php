@@ -9,4 +9,6 @@ define('dicionario', [
     'bebida' => 'Bebida',
     'buffet' => 'Buffet',
     'tema' => 'Tema',
+    'nomeResponsavel' => 'Nome Responsavel',
+    'telefone' => 'Telefone',
 ]);

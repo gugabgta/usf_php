@@ -1,12 +1,9 @@
 <?php
 
-session_start();
-
 use usf\Connection;
 use usf\NoSqlQuery;
 
-require_once '../vendor/autoload.php';
-require_once '../includes/colors.php';
+require_once '../includes/setSessao.php';
 
 $connection = (new Connection)->connect('firebase');
 $query = new NoSqlQuery($connection->getConnection());
@@ -60,6 +57,23 @@ require_once '../templates/head.php';
             </div>
             <div class="col-lg-10">
                 <input class="form-control" step="1" min="0" type="number" name="qtdPessoas" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <label for="qtdPessoas">Nome Responsavel: </label>
+            </div>
+            <div class="col-lg-10">
+                <input class="form-control" step="1" min="0" type="text" name="nomeResponsavel" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <label for="qtdPessoas">Telefone: </label>
+            </div>
+            <div class="col-lg-10">
+                <input class="form-control" step="1" pattern="^9\d{8}$" type="text" name="telefone" required/>
+                <small>Formato: 9XXXXXXXX</small>
             </div>
         </div>
         <div class="row">

@@ -1,4 +1,4 @@
 <?php
 
-header('Location: includes/setSessao.php');
+header('Location: views/login.php');
 exit();

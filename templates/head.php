@@ -33,9 +33,9 @@
             <li class="nav-item">
                 <a class="nav-link active" href="../views/agendamentos.php">Agendamentos</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link active" href="../views/buffet.php">Buffet</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link active" href="../views/sobre.php">Sobre nós</a>
             </li>

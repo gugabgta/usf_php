@@ -21,9 +21,9 @@ $mes_start = $range_start->format('m');
 $mes_end = $range_end->format('m');
 
 $meses = [];
-if($mes_start = 11) {
+if($mes_start == 11) {
     $meses = [11, 12, 1];
-} elseif ($mes_start = 12) {
+} elseif ($mes_start == 12) {
     $meses = [12, 1, 2];
 } else {
     while($mes_start <= $mes_end) {
@@ -38,6 +38,7 @@ $query = new NoSqlQuery($connection->getConnection());
 $array_eventos = [];
 $index = 0;
 foreach($meses as $index => $mes) {
+    $mes = sprintf("%02d", $mes);
     $select = $query->select("eventos/$ano/$mes");
     if(empty($select)) continue;
     foreach($select as $dia => $evento) {

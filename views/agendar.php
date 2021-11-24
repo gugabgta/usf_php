@@ -1,5 +1,6 @@
 <?php
 
+die('404 not found');
 session_start();
 
 use usf\Html;
